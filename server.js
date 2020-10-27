@@ -12,15 +12,15 @@ client.on('ready', () => {
 
 client.on('message', msg => { 
   if (commandIs("ping", msg)) {
-    msg.channel.send ('pong');
+     msg.channel.send('pong');
   }
   
   if (commandIs("uwu", msg)) {
-     msg.channel.send ('ówó');
+     msg.channel.send('ówó');
   }
 
   if (commandIs("playlist", msg)) {
-    msg.reply ('https://open.spotify.com/playlist/7rVPJaF5MtgUbIlNQKjza2?si=_dWlIE6FQbiHQC2aAYYuLA');
+     msg.reply('https://open.spotify.com/playlist/7rVPJaF5MtgUbIlNQKjza2?si=_dWlIE6FQbiHQC2aAYYuLA');
   }
 
   if(commandIs("kiss", msg)){
@@ -39,7 +39,7 @@ client.on('message', msg => {
     if(mention){
       msg.channel.send(msg.author.tag + " le ha hecho patpat a: " +  mention.tag);
       msg.channel.send("https://tenor.com/view/good-boy-pat-on-head-stitch-gif-14742401");
-    } else{
+    } else {
       msg.channel.send("falta pinguear a un usuario!");
     }
   
