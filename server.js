@@ -16,7 +16,7 @@ client.on('message', msg => {
     const exampleEmbed = new Discord.MessageEmbed()
     .setColor('#d08442')
     .setTitle("Aquí están los comandos del BosterBot ✨" )
-    .setDescription('b!kiss b!patpat b!cry b!angry b!mimir b!hug b!shy b!jueves')
+    .setDescription('b!kiss b!patpat b!cry b!angry b!mimir b!hug b!shy b!jueves');
     msg.channel.send(exampleEmbed);
   }
 
@@ -25,8 +25,8 @@ client.on('message', msg => {
     if(mention){
       const exampleEmbed = new Discord.MessageEmbed()
     	.setColor('#d08442')
-	    .setTitle(msg.author.tag + " le ha dado un besito a: " + mention.tag)
-	    .setImage('https://media1.tenor.com/images/933632688c082ad6b67506c392e7648c/tenor.gif');
+	.setTitle(msg.author.tag + " le ha dado un besito a: " + mention.tag)
+	.setImage('https://media1.tenor.com/images/933632688c082ad6b67506c392e7648c/tenor.gif');
       msg.channel.send(exampleEmbed);
       //msg.channel.send(msg.author.tag + " le ha dado un besito a: " + mention.tag);
       //msg.channel.send("https://media1.tenor.com/images/933632688c082ad6b67506c392e7648c/tenor.gif");
@@ -58,7 +58,7 @@ client.on('message', msg => {
       const exampleEmbed = new Discord.MessageEmbed()
       .setColor('#d08442')
       .setTitle(msg.author.tag + " está triste, "  +  mention.tag + " ¡Ven a darle amorcito! ")
-      .setImage('https://media1.tenor.com/images/6088fab756706a4bf141e28fe330a2be/tenor.gif?itemid=16408575')
+      .setImage('https://media1.tenor.com/images/6088fab756706a4bf141e28fe330a2be/tenor.gif?itemid=16408575');
       msg.channel.send(exampleEmbed);
       //msg.channel.send (msg.author.tag + " está triste:(. ¡Ven a darle amorcito! "  +  mention.tag);
       //msg.channel.send ("https://media1.tenor.com/images/6088fab756706a4bf141e28fe330a2be/tenor.gif?itemid=16408575");
@@ -79,7 +79,7 @@ client.on('message', msg => {
       const exampleEmbed = new Discord.MessageEmbed()
       .setColor('#d08442')
       .setTitle(msg.author.tag + " está amurrao/amurrá por culpa de: "  +  mention.tag + " D:")
-      .setImage('https://media1.tenor.com/images/80ebe3a6e21184112062b8d7afb4aeac/tenor.gif?itemid=12859906')
+      .setImage('https://media1.tenor.com/images/80ebe3a6e21184112062b8d7afb4aeac/tenor.gif?itemid=12859906');
       msg.channel.send(exampleEmbed);
       //msg.channel.send (msg.author.tag + " está amurrao/amurrá. D: " + mention.tag );
       //msg.channel.send ("https://media1.tenor.com/images/80ebe3a6e21184112062b8d7afb4aeac/tenor.gif?itemid=12859906");
@@ -87,7 +87,7 @@ client.on('message', msg => {
       const exampleEmbed = new Discord.MessageEmbed()
       .setColor('#d08442')
       .setTitle(msg.author.tag + " está amurrao/amurrá D:")
-      .setImage('https://media1.tenor.com/images/80ebe3a6e21184112062b8d7afb4aeac/tenor.gif?itemid=12859906')
+      .setImage('https://media1.tenor.com/images/80ebe3a6e21184112062b8d7afb4aeac/tenor.gif?itemid=12859906');
       msg.channel.send(exampleEmbed);
       //msg.channel.send("falta pinguear a un usuario!");
     }
@@ -120,7 +120,7 @@ client.on('message', msg => {
       const exampleEmbed = new Discord.MessageEmbed()
       .setColor('#d08442')
       .setTitle(msg.author.tag + " le ha dado un abrazo a: "+ mention.tag)
-      .setImage('https://media1.tenor.com/images/ce9dc4b7e715cea12604f8dbdb49141b/tenor.gif?itemid=4451998')
+      .setImage('https://media1.tenor.com/images/ce9dc4b7e715cea12604f8dbdb49141b/tenor.gif?itemid=4451998');
       msg.channel.send(exampleEmbed)
       //msg.channel.send (msg.author.tag + " le ha dado un abrazo a: "+ mention.tag);
       //msg.channel.send ("https://media1.tenor.com/images/ce9dc4b7e715cea12604f8dbdb49141b/tenor.gif?itemid=4451998");
@@ -135,7 +135,7 @@ client.on('message', msg => {
       const exampleEmbed = new Discord.MessageEmbed()
       .setColor('#d08442')
       .setTitle(msg.author.tag + " está shy por: " +  mention.tag + " uwu")
-      .setImage('https://media1.tenor.com/images/8ab2d0dfe6b37b17a617fa2b26bf29f7/tenor.gif?itemid=13636106')
+      .setImage('https://media1.tenor.com/images/8ab2d0dfe6b37b17a617fa2b26bf29f7/tenor.gif?itemid=13636106');
       msg.channel.send(exampleEmbed);
       //msg.channel.send (msg.author.tag + " está shy uwu " + mention.tag);
       //msg.channel.send ("https://media1.tenor.com/images/8ab2d0dfe6b37b17a617fa2b26bf29f7/tenor.gif?itemid=13636106");
@@ -143,7 +143,7 @@ client.on('message', msg => {
       const exampleEmbed = new Discord.MessageEmbed()
       .setColor('#d08442')
       .setTitle(msg.author.tag + " está shy uwu")
-      .setImage('https://media1.tenor.com/images/8ab2d0dfe6b37b17a617fa2b26bf29f7/tenor.gif?itemid=13636106') 
+      .setImage('https://media1.tenor.com/images/8ab2d0dfe6b37b17a617fa2b26bf29f7/tenor.gif?itemid=13636106');
       msg.channel.send(exampleEmbed);
       //msg.channel.send(msg.author.tag + " está shy uwu")
     }
