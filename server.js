@@ -1,4 +1,3 @@
-
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
@@ -16,7 +15,7 @@ client.on('message', msg => {
     const exampleEmbed = new Discord.MessageEmbed()
     .setColor('#d08442')
     .setTitle("Aquí están los comandos del BosterBot ✨" )
-    .setDescription('b!kiss b!patpat b!cry b!angry b!mimir b!hug b!shy b!jueves');
+    .setDescription('b!kiss\n b!patpat\n b!cry\n b!angry\n b!mimir\n b!despertar\n b!descansar\n b!hug\n b!shy\n b!jueves\n b!troleo\n b!simp\n b!funar\n b!kill\n b!death\n b!estudiar\n b!suicide\n');
     msg.channel.send(exampleEmbed);
   }
 
@@ -25,8 +24,8 @@ client.on('message', msg => {
     if(mention){
       const exampleEmbed = new Discord.MessageEmbed()
     	.setColor('#d08442')
-	.setTitle(msg.author.tag + " le ha dado un besito a: " + mention.tag)
-	.setImage('https://media1.tenor.com/images/933632688c082ad6b67506c392e7648c/tenor.gif');
+	    .setTitle(msg.author.tag + " le ha dado un besito a: " + mention.tag)
+	    .setImage('https://media1.tenor.com/images/933632688c082ad6b67506c392e7648c/tenor.gif');
       msg.channel.send(exampleEmbed);
       //msg.channel.send(msg.author.tag + " le ha dado un besito a: " + mention.tag);
       //msg.channel.send("https://media1.tenor.com/images/933632688c082ad6b67506c392e7648c/tenor.gif");
@@ -114,6 +113,23 @@ client.on('message', msg => {
     }
   }
 
+  if(commandIs("despertar", msg)){
+    let mention = msg.mentions.users.first()
+    if(mention){
+      const exampleEmbed = new Discord.MessageEmbed()
+      .setColor('#d08442')
+      .setTitle(msg.author.tag + " está despertando a: " + mention.tag)
+      .setImage("https://media1.tenor.com/images/4fbc786d007d0c3d7e2f16d351bc390d/tenor.gif?itemid=17395163");
+      msg.channel.send(exampleEmbed);
+    } else {
+      const exampleEmbed = new Discord.MessageEmbed()
+      .setColor('#d08442')
+      .setTitle(msg.author.tag + " acaba de despertar")
+      .setImage("https://media1.tenor.com/images/9f4acec042c45f97b38e129cfdea6ac5/tenor.gif?itemid=12183777");
+      msg.channel.send(exampleEmbed);
+    }
+  }
+
   if(commandIs("hug", msg)){
     let mention = msg.mentions.users.first();
     if (mention){
@@ -169,6 +185,122 @@ client.on('message', msg => {
       //msg.channel.send("https://media1.tenor.com/images/28fc963091e05e1deb32e096c28f040f/tenor.gif?itemid=18184379");
     }
   }
+
+  if(commandIs("troleo", msg)){
+    let mention = msg.mentions.users.first();
+    if(mention){
+      const exampleEmbed = new Discord.MessageEmbed()
+      .setColor('#d08442')
+      .setTitle(msg.author.tag + " ha troleado a: " + mention.tag + " 😈")
+      .setImage('https://media1.tenor.com/images/6dde10af74e38242996efdf2db326d4a/tenor.gif');
+      msg.channel.send(exampleEmbed);
+    } else {
+      const exampleEmbed = new Discord.MessageEmbed()
+      .setColor('#d08442')
+      .setTitle(msg.author.tag + " está en modo troleo 😈")
+      .setImage('https://media1.tenor.com/images/6dde10af74e38242996efdf2db326d4a/tenor.gif');
+      msg.channel.send(exampleEmbed);
+    }
+  }
+
+  if(commandIs("simp", msg)){
+    let mention = msg.mentions.users.first();
+    if(mention){
+      const exampleEmbed = new Discord.MessageEmbed()
+      .setColor('#d08442')
+      .setTitle(msg.author.tag + " es simp de: " + mention.tag)
+      .setImage("https://media1.tenor.com/images/7546b4d8dd8bf8953edc0abb0192f8ca/tenor.gif?itemid=18209528");
+      msg.channel.send(exampleEmbed);
+    } else {
+      const exampleEmbed = new Discord.MessageEmbed()
+      .setColor('#d08442')
+      .setTitle(msg.author.tag + " es simp 😔")
+      .setImage("https://media1.tenor.com/images/77c2ab01e5c0b7fc1cce8e789dfff965/tenor.gif?itemid=18136223");
+      msg.channel.send(exampleEmbed);
+    }
+  }
+
+  if(commandIs("estudiar", msg)){
+    const exampleEmbed = new Discord.MessageEmbed()
+    .setColor('#d08442')
+    .setTitle(msg.author.tag + " está estudiando, no molestar uwu")
+    .setImage("https://media1.tenor.com/images/71a38d2d8cd692a63fbde70f899b3afc/tenor.gif?itemid=15313949");
+    msg.channel.send(exampleEmbed);
+  }
+
+  if(commandIs("descansar", msg)){
+    let mention = msg.mentions.users.first();
+    if (mention){
+      const exampleEmbed = new Discord.MessageEmbed()
+      .setColor('#d08442')
+      .setTitle(msg.author.tag + " está descansando con: " + mention.tag)
+      .setImage("https://cdn.discordapp.com/attachments/764236045213499482/785989698002354176/d240ddbcf97be8749949be6360a02bd9.gif");
+      msg.channel.send(exampleEmbed);
+    } else {
+      const exampleEmbed = new Discord.MessageEmbed()
+      .setColor('#d08442')
+      .setTitle(msg.author.tag + " está descansando uwu")
+      .setImage("https://cdn.discordapp.com/attachments/764236045213499482/785989698002354176/d240ddbcf97be8749949be6360a02bd9.gif");
+      msg.channel.send(exampleEmbed);
+    }
+  }
+
+  if(commandIs("dance", msg)){
+    let mention = msg.mentions.users.first();
+    if(mention){
+      const exampleEmbed = new Discord.MessageEmbed()
+      .setColor('#d08442')
+      .setTitle(msg.author.tag + " está bailando con: " + mention.tag + " owo")
+      .setImage("https://media1.tenor.com/images/7627a7009dcd44f40bcf3c168f0c6ad6/tenor.gif?itemid=16108170");
+      msg.channel.send(exampleEmbed);
+    } else {
+      const exampleEmbed = new Discord.MessageEmbed()
+      .setColor('#d08442')
+      .setTitle(msg.author.tag + " está bailando uwu")
+      .setImage("https://media1.tenor.com/images/8fdcda26512797826631511017a11f93/tenor.gif?itemid=9765182");
+      msg.channel.send(exampleEmbed);
+    }
+  }
+
+  if(commandIs("death", msg)){
+    const exampleEmbed = new Discord.MessageEmbed()
+    .setColor('#d08442')
+    .setTitle(msg.author.tag + " ha murisido 😔 ")
+    .setImage("https://media1.tenor.com/images/79f1a0dd1bfc67b44c2d7ce4404c2a66/tenor.gif?itemid=5417340");
+    msg.channel.send(exampleEmbed);
+  }
+
+  if(commandIs("kill", msg)){
+    let mention = msg.mentions.users.first();
+    if(mention){
+      const exampleEmbed = new Discord.MessageEmbed()
+      .setColor('#d08442')
+      .setTitle(msg.author.tag + " ha matado a: " + mention.tag)
+      .setImage("https://media1.tenor.com/images/f1e22aead0a7da83a6949984208d527f/tenor.gif?itemid=18770900");
+      msg.channel.send(exampleEmbed);
+    } else {
+      msg.channel.send("falta pinguear a un usuario!")
+    }
+  }
+
+  if(commandIs("funar", msg)){
+    let mention = msg.mentions.users.first();
+    if(mention){
+      const exampleEmbed = new Discord.MessageEmbed()
+      .setColor('#d08442')
+      .setTitle(msg.author.tag + " a funado a: " + mention.tag)
+      .setImage("https://media1.tenor.com/images/6b70c48240988272471ed917869a1206/tenor.gif?itemid=16885690");
+      msg.channel.send(exampleEmbed);
+    } else {
+      const exampleEmbed = new Discord.MessageEmbed()
+      .setColor('#d08442')
+      .setTitle(msg.author.tag + " ha sido funado/a 😔")
+      .setImage("https://media1.tenor.com/images/d5c2d745cf45926be2742e1e3c302394/tenor.gif?itemid=18723375");
+      msg.channel.send(exampleEmbed);
+    }
+  }
+
+ 
 
 });
 
