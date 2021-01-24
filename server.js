@@ -317,7 +317,7 @@ client.on('message', msg => {
   }
 
   if(commandIs("funar", msg)){
-    let mention = msg.mentions.users.first()
+    let mention = msg.mentions.users.first();
     if(mention){
       const exampleEmbed = new Discord.MessageEmbed()
       .setColor('#d08442')
@@ -334,13 +334,13 @@ client.on('message', msg => {
   }
  
   if(commandIs("wate", msg)){
-    let mention = msg.mentions.users.first()
+    let mention = msg.mentions.users.first();
     let link = random_item(['https://media1.tenor.com/images/c1ee6a496c38c0ffb457b387f2aaa4c8/tenor.gif?itemid=9286363', 'https://media1.tenor.com/images/76ba1104bdf89164102894390cff18d1/tenor.gif?itemid=7948584', 'https://media1.tenor.com/images/b111863f0714504a8ba22a0c68e78f32/tenor.gif?itemid=12373244', 'https://media1.tenor.com/images/b746bc37f2e29185523b1b7a0df45fdd/tenor.gif?itemid=19285337']);
     if(mention){
       const exampleEmbed = new Discord.MessageEmbed()
     	.setColor('#d08442')
-	    .setTitle(msg.author.tag + " le ha pegado un wate a: " + mention.tag + " 😡")
-	    .setImage(link);
+	.setTitle(msg.author.tag + " le ha pegado un wate a: " + mention.tag + " 😡")
+	.setImage(link);
       msg.channel.send(exampleEmbed);
     } else {
       msg.channel.send("falta pingear a un usuario!");
