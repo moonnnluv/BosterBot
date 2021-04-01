@@ -19,8 +19,17 @@ client.on('message', msg => {
     const exampleEmbed = new Discord.MessageEmbed()
     .setColor('#d08442')
     .setTitle("Aquí están los comandos del BosterBot ✨" )
-    .setDescription('b!kiss [@usuario] -> Con este comando puedes darle un besito a otro usuario uwu\n b!patpat [@usuario]  -> Con este comando puedes hacerle patpat a otro usuario\n b!hug [@usuario]  -> Con este comando puedes abrazar a otro usuario uwu\n b!kill [@usuario] -> Con este comando puedes matar a otro usuario D:\n b!wate [@usuario] -> Con este comando puedes pegarle un wate a otro usuario 😡\n b!cry {@usuario} -> Con este comando puedes llorar, o pedirle a otro usuario que te anime :D\n b!angry {@usuario} -> Con este comando puedes demostrar cuando estés enojado, y a la vez, enojarte con otro usuario D:\n b!mimir {@usuario} -> Con este comando puedes ir a mimir, solo o acompañado :D\n b!despertar {@usuario} -> Con este comando puedes despertar y despertar a otro usuario uwu\nb!descansar {@usuario} -> Con este comando puedes descansar, solo o acompañado :D\n b!shy  {@usuario} -> Con este comando puedes demostrar cuando estás shy, y a su vez, responsabilizar a otro usuario de aquello (∩˃o˂∩)♡\n b!jueves {@usuario} -> Con este comando puedes desearle un feliz jueves a otro usuario, ¡o a todos!\n b!troleo {@usuario} -> Con este comando puedes trollear a otro usuario, ¡o a todos!\n b!simp {@usuario} -> Con este comando puedes demostrar lo simp que eres. y especificar a quien simpeas 😳\n b!funar {@usuario}-> Con este comando puedes funar o demostrar que te funaron 😔\n b!death -> Con este comando puedes simplemente murisir:(\n b!estudiar -> Con este comando puedes enseñarle a los demás que estás estudiando, evitando charlas que te puedan distraer D:\n b!work -> Con este comando puedes enseñarle a los demás que estás trabajando, evitando charlas que te puedan distraer D:\n \n Los elementos entre {} son opcionales, mientras que los que tienen [] son obligatorios. Los comandos que no poseen ninguno de los caracteres antes definidos son libres de utilizar sin mencionar a ningún usuario.\n');
+    .setDescription('b!kiss [@usuario] -> Con este comando puedes darle un besito a otro usuario uwu\n b!patpat [@usuario]  -> Con este comando puedes hacerle patpat a otro usuario\n b!hug [@usuario]  -> Con este comando puedes abrazar a otro usuario uwu\n b!kill [@usuario] -> Con este comando puedes matar a otro usuario D:\n b!wate [@usuario] -> Con este comando puedes pegarle un wate a otro usuario 😡\n b!cry {@usuario} -> Con este comando puedes llorar, o pedirle a otro usuario que te anime :D\n b!angry {@usuario} -> Con este comando puedes demostrar cuando estés enojado, y a la vez, enojarte con otro usuario D:\n b!mimir {@usuario} -> Con este comando puedes ir a mimir, solo o acompañado :D\n b!despertar {@usuario} -> Con este comando puedes despertar y despertar a otro usuario uwu\nb!descansar {@usuario} -> Con este comando puedes descansar, solo o acompañado :D\n b!shy  {@usuario} -> Con este comando puedes demostrar cuando estás shy, y a su vez, responsabilizar a otro usuario de aquello (∩˃o˂∩)♡\n b!jueves {@usuario} -> Con este comando puedes desearle un feliz jueves a otro usuario, ¡o a todos!\n b!troleo {@usuario} -> Con este comando puedes trollear a otro usuario, ¡o a todos!\n b!simp {@usuario} -> Con este comando puedes demostrar lo simp que eres, y especificar a quien simpeas 😳\n b!funar {@usuario}-> Con este comando puedes funar o demostrar que te funaron 😔\n b!death -> Con este comando puedes simplemente murisir:(\n b!estudiar -> Con este comando puedes enseñarle a los demás que estás estudiando, evitando charlas que te puedan distraer D:\n b!work -> Con este comando puedes enseñarle a los demás que estás trabajando, evitando charlas que te puedan distraer D:\n \n Los elementos entre {} son opcionales, mientras que los que tienen [] son obligatorios. Los comandos que no poseen ninguno de los caracteres antes definidos son libres de utilizar sin mencionar a ningún usuario.\n');
     msg.channel.send(exampleEmbed);
+  }
+
+  if (commandIs("info", msg)){
+    let mention = msg.mentions.users.first();
+    if(mention){
+      const exampleEmbed = new Discord.MessageEmbed()
+     .setColor('#d08442')
+     .setTitle("Información de Usuario")
+    }
   }
 
   if(commandIs("kiss", msg)){
@@ -317,7 +326,7 @@ client.on('message', msg => {
   }
 
   if(commandIs("funar", msg)){
-    let mention = msg.mentions.users.first();
+    let mention = msg.mentions.users.first()
     if(mention){
       const exampleEmbed = new Discord.MessageEmbed()
       .setColor('#d08442')
@@ -334,13 +343,13 @@ client.on('message', msg => {
   }
  
   if(commandIs("wate", msg)){
-    let mention = msg.mentions.users.first();
+    let mention = msg.mentions.users.first()
     let link = random_item(['https://media1.tenor.com/images/c1ee6a496c38c0ffb457b387f2aaa4c8/tenor.gif?itemid=9286363', 'https://media1.tenor.com/images/76ba1104bdf89164102894390cff18d1/tenor.gif?itemid=7948584', 'https://media1.tenor.com/images/b111863f0714504a8ba22a0c68e78f32/tenor.gif?itemid=12373244', 'https://media1.tenor.com/images/b746bc37f2e29185523b1b7a0df45fdd/tenor.gif?itemid=19285337']);
     if(mention){
       const exampleEmbed = new Discord.MessageEmbed()
     	.setColor('#d08442')
-	.setTitle(msg.author.tag + " le ha pegado un wate a: " + mention.tag + " 😡")
-	.setImage(link);
+	    .setTitle(msg.author.tag + " le ha pegado un wate a: " + mention.tag + " 😡")
+	    .setImage(link);
       msg.channel.send(exampleEmbed);
     } else {
       msg.channel.send("falta pingear a un usuario!");
