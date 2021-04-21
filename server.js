@@ -24,12 +24,18 @@ client.on('message', msg => {
   }
 
   if (commandIs("info", msg)){
-    let mention = msg.mentions.users.first();
-    if(mention){
-      const exampleEmbed = new Discord.MessageEmbed()
-     .setColor('#d08442')
-     .setTitle("Información de Usuario")
+    if(msg.author.id === '636322958478016512'){
+      let mention = msg.mentions.users.first();
+      if(mention){
+        const exampleEmbed = new Discord.MessageEmbed()
+        .setColor('#d08442')
+        .setTitle("Información de Usuario!")
+        msg.channel.send(exampleEmbed);
+      } else {
+        msg.channel.send("no tienes permisos para utilizar este comando:(");
+      }
     }
+    
   }
 
   if(commandIs("kiss", msg)){
@@ -353,6 +359,22 @@ client.on('message', msg => {
       msg.channel.send(exampleEmbed);
     } else {
       msg.channel.send("falta pingear a un usuario!");
+    }
+  }
+
+  if(commandIs("cuffke", msg)){
+    if(msg.author.id === '636322958478016512', '388021887994953731', '152806695897268224'){
+      let mention = msg.mentions.users.first();
+      let link = random_item(['https://media1.tenor.com/images/a829b33d49f61a042728c06347bddd57/tenor.gif?itemid=5166505', 'https://media1.tenor.com/images/452ff1d490f6d4143258ad0a80a94b90/tenor.gif?itemid=11925145', 'https://media1.tenor.com/images/8cb01d0806dde0b0a7514714c4b3b45d/tenor.gif?itemid=12348563', 'https://media1.tenor.com/images/7093a35ea8215cf0d1739a5c4be20d00/tenor.gif?itemid=13721103', 'https://media1.tenor.com/images/fe8ebb590e8eb5b76ae59e5d56dbf7f2/tenor.gif?itemid=15177883']);
+      if(mention){
+        const exampleEmbed = new Discord.MessageEmbed()
+        .setColor('#d08442')
+        .setTitle(msg.author.tag + " le ha dado un cuffke a: " + mention.tag)
+        .setImage(link)
+        msg.channel.send(exampleEmbed);
+      } else {
+        msg.channel.send("no tienes permisos para utilizar este comando:(");
+      }
     }
   }
  
