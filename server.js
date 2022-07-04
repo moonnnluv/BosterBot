@@ -19,28 +19,39 @@ client.on('message', msg => {
     const exampleEmbed = new Discord.MessageEmbed()
     .setColor('#d08442')
     .setTitle("Aquí están los comandos del BosterBot ✨" )
-    .setDescription('b!kiss [@usuario] -> Con este comando puedes darle un besito a otro usuario uwu\n b!patpat [@usuario]  -> Con este comando puedes hacerle patpat a otro usuario\n b!hug [@usuario]  -> Con este comando puedes abrazar a otro usuario uwu\n b!kill [@usuario] -> Con este comando puedes matar a otro usuario D:\n b!wate [@usuario] -> Con este comando puedes pegarle un wate a otro usuario 😡\n b!cry {@usuario} -> Con este comando puedes llorar, o pedirle a otro usuario que te anime :D\n b!angry {@usuario} -> Con este comando puedes demostrar cuando estés enojado, y a la vez, enojarte con otro usuario D:\n b!mimir {@usuario} -> Con este comando puedes ir a mimir, solo o acompañado :D\n b!despertar {@usuario} -> Con este comando puedes despertar y despertar a otro usuario uwu\nb!descansar {@usuario} -> Con este comando puedes descansar, solo o acompañado :D\n b!shy  {@usuario} -> Con este comando puedes demostrar cuando estás shy, y a su vez, responsabilizar a otro usuario de aquello (∩˃o˂∩)♡\n b!jueves {@usuario} -> Con este comando puedes desearle un feliz jueves a otro usuario, ¡o a todos!\n b!troleo {@usuario} -> Con este comando puedes trollear a otro usuario, ¡o a todos!\n b!simp {@usuario} -> Con este comando puedes demostrar lo simp que eres, y especificar a quien simpeas 😳\n b!funar {@usuario}-> Con este comando puedes funar o demostrar que te funaron 😔\n b!death -> Con este comando puedes simplemente murisir:(\n b!estudiar -> Con este comando puedes enseñarle a los demás que estás estudiando, evitando charlas que te puedan distraer D:\n b!work -> Con este comando puedes enseñarle a los demás que estás trabajando, evitando charlas que te puedan distraer D:\n \n Los elementos entre {} son opcionales, mientras que los que tienen [] son obligatorios. Los comandos que no poseen ninguno de los caracteres antes definidos son libres de utilizar sin mencionar a ningún usuario.\n');
+    .setDescription('b!kiss [@usuario] -> Con este comando puedes darle un besito a otro usuario uwu\n b!patpat [@usuario]  -> Con este comando puedes hacerle patpat a otro usuario\n b!hug [@usuario]  -> Con este comando puedes abrazar a otro usuario uwu\n b!kill [@usuario] -> Con este comando puedes matar a otro usuario D:\n b!wate [@usuario] -> Con este comando puedes pegarle un wate a otro usuario 😡\n b!cry {@usuario} -> Con este comando puedes llorar, o pedirle a otro usuario que te anime :D\n b!angry {@usuario} -> Con este comando puedes demostrar cuando estés enojado, y a la vez, enojarte con otro usuario D:\n b!mimir {@usuario} -> Con este comando puedes ir a mimir, solo o acompañado :D\n b!despertar {@usuario} -> Con este comando puedes despertar y despertar a otro usuario uwu\nb!descansar {@usuario} -> Con este comando puedes descansar, solo o acompañado :D\n b!shy  {@usuario} -> Con este comando puedes demostrar cuando estás shy, y a su vez, responsabilizar a otro usuario de aquello (∩˃o˂∩)♡\n b!jueves {@usuario} -> Con este comando puedes desearle un feliz jueves a otro usuario, ¡o a todos!\n b!troleo {@usuario} -> Con este comando puedes trollear a otro usuario, ¡o a todos!\n b!simp {@usuario} -> Con este comando puedes demostrar lo simp que eres, y especificar a quien simpeas 😳\n b!funar {@usuario}-> Con este comando puedes funar o demostrar que te funaron 😔\n b!death -> Con este comando puedes simplemente murisir:(\n b!estudiar -> Con este comando puedes enseñarle a los demás que estás estudiando, evitando charlas que te puedan distraer D:\n b!work -> Con este comando puedes enseñarle a los demás que estás trabajando, evitando charlas que te puedan distraer D:\n \n Los elementos entre {} son opcionales, mientras que los que tienen [] son obligatorios. Los comandos que no poseen ninguno de los caracteres antes definidos son libres de utilizar sin mencionar a ningún usuario.\n')
+    .setFooter("Bot creado por: ale uwu#4455")
     msg.channel.send(exampleEmbed);
   }
 
   if (commandIs("info", msg)){
-    if(msg.author.id === '636322958478016512'){
+    if(msg.author.id === '6636322958478016512' || msg.author.id === '305502581667659779'){
       let mention = msg.mentions.users.first();
+      let user = msg.mentions.users.first() || msg.author;
+      let guildUser = msg.guild.member(user);
       if(mention){
         const exampleEmbed = new Discord.MessageEmbed()
         .setColor('#d08442')
         .setTitle("Información de Usuario!")
+        .addField("Usuario: ", user.tag)
+        .addField("Nombre en Servidor: ", guildUser.nickname || 'No tiene nombre personalizado.')
+        .addField("ID de Usuario: ", user.id)
+        .addField("En el server desde: ", guildUser.joinedAt)
+        .addField("En Discord desde: ", user.createdAt)
+        .addField("Roles: ", guildUser.roles.cache.size - 1);
         msg.channel.send(exampleEmbed);
       } else {
-        msg.channel.send("no tienes permisos para utilizar este comando:(");
+        msg.channel.send("falta pinguear a un usuario!");
       }
+    } else {
+      msg.channel.send("no tienes permisos para utilizar este comando:(");
     }
     
   }
 
   if(commandIs("kiss", msg)){
     let mention = msg.mentions.users.first();
-    let link = random_item(['https://media1.tenor.com/images/933632688c082ad6b67506c392e7648c/tenor.gif', 'https://media.tenor.com/images/6702ca08b5375a74b6b9805382021f73/tenor.gif', 'https://media.tenor.com/images/a23d2ec86610bd1dd026a07853992b57/tenor.gif', 'https://media.tenor.com/images/54e50fcee0f5b4549acd32b26e0843f6/tenor.gif', 'https://media1.tenor.com/images/843885f3b8fd0ab3f424ab4c20604c07/tenor.gif']);
+    let link = random_item(['https://media1.tenor.com/images/933632688c082ad6b67506c392e7648c/tenor.gif', 'https://media.tenor.com/images/6702ca08b5375a74b6b9805382021f73/tenor.gif', 'https://media.tenor.com/images/a23d2ec86610bd1dd026a07853992b57/tenor.gif', 'https://media.tenor.com/images/54e50fcee0f5b4549acd32b26e0843f6/tenor.gif', 'https://media1.tenor.com/images/843885f3b8fd0ab3f424ab4c20604c07/tenor.gif', 'https://media1.tenor.com/images/3582f255681bfcbe4cad1b0ea93eb3b0/tenor.gif?itemid=18949582', 'https://cdn.discordapp.com/attachments/798399661694124062/833830244360257572/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f.gif', 'https://cdn.discordapp.com/attachments/798399661694124062/833830246536970270/32a9d9205d83589a591b79e6085d3b11.gif', 'https://cdn.discordapp.com/attachments/798399661694124062/833830247136624690/tumblr_m39q1rwx061qfgjtno1_500.gif', 'https://cdn.discordapp.com/attachments/798399661694124062/833830247374782534/596ee732de1e5492dad5e241768d63a540965013_hq.gif']);
     if(mention){
       const exampleEmbed = new Discord.MessageEmbed()
     	.setColor('#d08442')
@@ -57,7 +68,7 @@ client.on('message', msg => {
 
   if(commandIs("patpat", msg)){
     let mention = msg.mentions.users.first();
-    let link = random_item(['https://media.tenor.com/images/374a3ed006e9dd52a874e40a459a9cae/tenor.gif', 'https://media.tenor.com/images/1d37a873edfeb81a1f5403f4a3bfa185/tenor.gif', 'https://media.tenor.com/images/0d9d44e6a9577eb28c47b22f5acd7d69/tenor.gif', 'https://media.tenor.com/images/09a4b724e986b12c391cf791a9a9db92/tenor.gif']);
+    let link = random_item(['https://media.tenor.com/images/374a3ed006e9dd52a874e40a459a9cae/tenor.gif', 'https://media1.tenor.com/images/76d3b063b91ac22600d5604003047c01/tenor.gif?itemid=16162057', 'https://media1.tenor.com/images/7cfb7958c8496dd74e738978264e1342/tenor.gif?itemid=19534863', 'https://media.tenor.com/images/1d37a873edfeb81a1f5403f4a3bfa185/tenor.gif', 'https://media.tenor.com/images/0d9d44e6a9577eb28c47b22f5acd7d69/tenor.gif', 'https://media.tenor.com/images/09a4b724e986b12c391cf791a9a9db92/tenor.gif']);
     if(mention){
       const exampleEmbed = new Discord.MessageEmbed()
       .setColor('#d08442')
@@ -74,7 +85,7 @@ client.on('message', msg => {
 
   if(commandIs("cry", msg)){
     let mention = msg.mentions.users.first();
-    let link = random_item(['https://media.tenor.com/images/c8f6d1972f6051cf40fec17da7b18a53/tenor.gif', 'https://media.tenor.com/images/14faea11230861e5f61bb4d90ac9e61d/tenor.gif', 'https://media.tenor.com/images/eda88aaad47aaab5d861c19a03d73e27/tenor.gif', 'https://media1.tenor.com/images/6088fab756706a4bf141e28fe330a2be/tenor.gif?itemid=16408575']);
+    let link = random_item(['https://media.tenor.com/images/c8f6d1972f6051cf40fec17da7b18a53/tenor.gif', 'https://media1.tenor.com/images/2e4d11202bf35e6d14d5a58a0a322402/tenor.gif?itemid=17484634', 'https://media1.tenor.com/images/de730b51400ed4dfb66d04141ea79a2d/tenor.gif?itemid=7353410', 'https://media.tenor.com/images/14faea11230861e5f61bb4d90ac9e61d/tenor.gif', 'https://media.tenor.com/images/eda88aaad47aaab5d861c19a03d73e27/tenor.gif', 'https://media1.tenor.com/images/6088fab756706a4bf141e28fe330a2be/tenor.gif?itemid=16408575']);
     if(mention){
       const exampleEmbed = new Discord.MessageEmbed()
       .setColor('#d08442')
@@ -97,7 +108,7 @@ client.on('message', msg => {
 
   if(commandIs("angry", msg)){
     let mention = msg.mentions.users.first();
-    let link = random_item(['https://media1.tenor.com/images/c409b7031d3768c24db8bc0cbb1a2cb5/tenor.gif?itemid=5516967', 'https://media1.tenor.com/images/74db8b0b64e8d539aebebfbb2094ae84/tenor.gif?itemid=15144612', 'https://media.tenor.com/images/4d85ff515cd264eefc0866555a1e9763/tenor.gif', 'https://media1.tenor.com/images/80ebe3a6e21184112062b8d7afb4aeac/tenor.gif?itemid=12859906']);
+    let link = random_item(['https://media1.tenor.com/images/c409b7031d3768c24db8bc0cbb1a2cb5/tenor.gif?itemid=5516967', 'https://media.tenor.com/images/b82198ff7c3c531f8aec996fb4fc44ea/tenor.gif', 'https://media1.tenor.com/images/1cdc7808339acac9b690b2d9195aa94c/tenor.gif?itemid=16517686', 'https://media1.tenor.com/images/74db8b0b64e8d539aebebfbb2094ae84/tenor.gif?itemid=15144612', 'https://media.tenor.com/images/4d85ff515cd264eefc0866555a1e9763/tenor.gif', 'https://media1.tenor.com/images/80ebe3a6e21184112062b8d7afb4aeac/tenor.gif?itemid=12859906']);
     if(mention){
       const exampleEmbed = new Discord.MessageEmbed()
       .setColor('#d08442')
@@ -129,7 +140,7 @@ client.on('message', msg => {
       //msg.channel.send (msg.author.tag + " se va a mimir, no molestar xfi ówó " + mention.tag);
       //msg.channel.send ("https://media1.tenor.com/images/c0722c1c9a9d7ad0ce382186e6c27bdc/tenor.gif");
     } else {
-      let link = random_item(['https://media.tenor.com/images/d35d9c3e50ef28255a364ca08fa7e66c/tenor.gif', 'https://media.tenor.com/images/2d198e4454e891404cca6651a582d49e/tenor.gif', 'https://media.tenor.com/images/3ca853d117eb53dada8252099010b57d/tenor.gif', 'https://media1.tenor.com/images/c0722c1c9a9d7ad0ce382186e6c27bdc/tenor.gif']);
+      let link = random_item(['https://media.tenor.com/images/d35d9c3e50ef28255a364ca08fa7e66c/tenor.gif', 'https://media1.tenor.com/images/6b1d8cf7b9880bcfea290eea918b16fc/tenor.gif?itemid=5535357', 'https://media.tenor.com/images/2d198e4454e891404cca6651a582d49e/tenor.gif', 'https://media.tenor.com/images/3ca853d117eb53dada8252099010b57d/tenor.gif', 'https://media1.tenor.com/images/c0722c1c9a9d7ad0ce382186e6c27bdc/tenor.gif']);
       const exampleEmbed = new Discord.MessageEmbed()
       .setColor('#d08442')
       .setTitle(msg.author.tag + " se va a mimir, no molestar xfi ówó ")
@@ -161,7 +172,7 @@ client.on('message', msg => {
 
   if(commandIs("hug", msg)){
     let mention = msg.mentions.users.first();
-    let link = random_item(['https://media.tenor.com/images/f1bf91d3870ed8b26367afd1b91ada9c/tenor.gif', 'https://media.tenor.com/images/d7f6849b07da0532c7dc3aab538d42d4/tenor.gif', 'https://media.tenor.com/images/8f44c083c55620c02f59c6bea378dca4/tenor.gif', 'https://media1.tenor.com/images/ce9dc4b7e715cea12604f8dbdb49141b/tenor.gif?itemid=4451998']);
+    let link = random_item(['https://media.tenor.com/images/f1bf91d3870ed8b26367afd1b91ada9c/tenor.gif', 'https://media.tenor.com/images/d7f6849b07da0532c7dc3aab538d42d4/tenor.gif', 'https://media.tenor.com/images/8f44c083c55620c02f59c6bea378dca4/tenor.gif', 'https://media1.tenor.com/images/ce9dc4b7e715cea12604f8dbdb49141b/tenor.gif?itemid=4451998', 'https://cdn.discordapp.com/attachments/798399661694124062/833831139026141214/tenor_1.gif','https://cdn.discordapp.com/attachments/798399661694124062/833831139537059900/tenor.gif','https://cdn.discordapp.com/attachments/798399661694124062/833831135917375520/anime-hug-6.gif', 'https://cdn.discordapp.com/attachments/798399661694124062/833831134198366258/giphy.gif', 'https://cdn.discordapp.com/attachments/798399661694124062/833831128464621578/06dd8f976b7353d69aec173b44927ef4.gif','https://cdn.discordapp.com/attachments/798399661694124062/833831127973101588/4d89d7f963b41a416ec8a55230dab31b.gif']);
     if (mention){
       const exampleEmbed = new Discord.MessageEmbed()
       .setColor('#d08442')
@@ -177,7 +188,7 @@ client.on('message', msg => {
 
   if(commandIs("shy", msg)){
     let mention = msg.mentions.users.first();
-    let link = random_item(['https://media.tenor.com/images/9813786df00ab5af42a65e257ed3b70d/tenor.gif', 'https://media.tenor.com/images/bc4b6a04a50354435171cd7bd6146786/tenor.gif', 'https://media.tenor.com/images/df3aff0bbe715befb4954b40da7f96b1/tenor.gif', 'https://media1.tenor.com/images/8ab2d0dfe6b37b17a617fa2b26bf29f7/tenor.gif?itemid=13636106']);
+    let link = random_item(['https://media.tenor.com/images/9813786df00ab5af42a65e257ed3b70d/tenor.gif', 'https://media1.tenor.com/images/82b0f0a24e1621510b1216317edd4ba0/tenor.gif?itemid=14119517', 'https://media1.tenor.com/images/cbfd2a06c6d350e19a0c173dec8dccde/tenor.gif?itemid=15727535', 'https://media1.tenor.com/images/639036f3c2f138e87a679f7e121482bf/tenor.gif?itemid=15338269', 'https://media.tenor.com/images/bc4b6a04a50354435171cd7bd6146786/tenor.gif', 'https://media.tenor.com/images/df3aff0bbe715befb4954b40da7f96b1/tenor.gif', 'https://media1.tenor.com/images/8ab2d0dfe6b37b17a617fa2b26bf29f7/tenor.gif?itemid=13636106']);
     if (mention){
       const exampleEmbed = new Discord.MessageEmbed()
       .setColor('#d08442')
@@ -187,7 +198,7 @@ client.on('message', msg => {
       //msg.channel.send (msg.author.tag + " está shy uwu " + mention.tag);
       //msg.channel.send ("https://media1.tenor.com/images/8ab2d0dfe6b37b17a617fa2b26bf29f7/tenor.gif?itemid=13636106");
     } else {
-      let link = random_item(['https://media.tenor.com/images/9813786df00ab5af42a65e257ed3b70d/tenor.gif', 'https://media.tenor.com/images/bc4b6a04a50354435171cd7bd6146786/tenor.gif', 'https://media.tenor.com/images/df3aff0bbe715befb4954b40da7f96b1/tenor.gif', 'https://media1.tenor.com/images/8ab2d0dfe6b37b17a617fa2b26bf29f7/tenor.gif?itemid=13636106']);
+      let link = random_item(['https://media.tenor.com/images/9813786df00ab5af42a65e257ed3b70d/tenor.gif', 'https://media1.tenor.com/images/82b0f0a24e1621510b1216317edd4ba0/tenor.gif?itemid=14119517', 'https://media1.tenor.com/images/cbfd2a06c6d350e19a0c173dec8dccde/tenor.gif?itemid=15727535', 'https://media1.tenor.com/images/639036f3c2f138e87a679f7e121482bf/tenor.gif?itemid=15338269', 'https://media.tenor.com/images/bc4b6a04a50354435171cd7bd6146786/tenor.gif', 'https://media.tenor.com/images/df3aff0bbe715befb4954b40da7f96b1/tenor.gif', 'https://media1.tenor.com/images/8ab2d0dfe6b37b17a617fa2b26bf29f7/tenor.gif?itemid=13636106']);
       const exampleEmbed = new Discord.MessageEmbed()
       .setColor('#d08442')
       .setTitle(msg.author.tag + " está shy uwu")
@@ -363,7 +374,7 @@ client.on('message', msg => {
   }
 
   if(commandIs("cuffke", msg)){
-    if(msg.author.id === '636322958478016512' || msg.author.id === '388021887994953731' || msg.author.id === '152806695897268224'){
+    if(msg.author.id === '636322958478016512', '388021887994953731', '152806695897268224'){
       let mention = msg.mentions.users.first();
       let link = random_item(['https://media1.tenor.com/images/a829b33d49f61a042728c06347bddd57/tenor.gif?itemid=5166505', 'https://media1.tenor.com/images/452ff1d490f6d4143258ad0a80a94b90/tenor.gif?itemid=11925145', 'https://media1.tenor.com/images/8cb01d0806dde0b0a7514714c4b3b45d/tenor.gif?itemid=12348563', 'https://media1.tenor.com/images/7093a35ea8215cf0d1739a5c4be20d00/tenor.gif?itemid=13721103', 'https://media1.tenor.com/images/fe8ebb590e8eb5b76ae59e5d56dbf7f2/tenor.gif?itemid=15177883']);
       if(mention){
@@ -372,9 +383,9 @@ client.on('message', msg => {
         .setTitle(msg.author.tag + " le ha dado un cuffke a: " + mention.tag)
         .setImage(link)
         msg.channel.send(exampleEmbed);
-      } else {
-        msg.channel.send("no tienes permisos para utilizar este comando:(");
-      }
+      } 
+    } else {
+      msg.channel.send("no tienes permisos para utilizar este comando:(");
     }
   }
  
