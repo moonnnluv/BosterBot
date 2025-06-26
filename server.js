@@ -392,4 +392,6 @@ client.on('message', msg => {
 
 });
 
-client.login('NzY0MjM3Mzc3NDU0NDczMzM2.X4DVhQ.lKHGiUZyDjOQ-nawZ0hV4_vpUUo');
+require('dotenv').config();
+client.login(process.env.DISCORD_TOKEN);
+
