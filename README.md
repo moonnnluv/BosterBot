@@ -2,7 +2,7 @@
 
 **BosterBot** es un bot desarrollado en JavaScript utilizando `discord.js`. Fue diseñado para enriquecer la experiencia en servidores de Discord con comandos emocionales, cómicos y de expresión personal, integrando respuestas visuales mediante GIFs.
 
-> Este proyecto fue creado como una iniciativa personal en 2020, mientras aprendía a programar. Fue desplegado en servidores reales y actualizado con base en pruebas de uso y feedback de usuarios. Agradezco a quienes me apoyaron con ajustes técnicos menores durante el proceso de aprendizaje.
+> Este proyecto fue creado como una iniciativa personal en 2020, mientras aprendía a programar. Fue desplegado en servidores reales y actualizado con base en pruebas de uso y feedback de usuarios. Agradezco a quienes me apoyaron con ajustes técnicos menores durante el proceso de aprendizaje. <33
 
 ## 🎯 Funcionalidades principales
 - Comandos sociales (`b!kiss`, `b!hug`, `b!shy`, `b!mimir`, `b!jueves`)
